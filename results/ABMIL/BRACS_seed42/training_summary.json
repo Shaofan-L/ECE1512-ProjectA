@@ -1,0 +1,11 @@
+{
+  "dataset": "BRACS",
+  "method": "ABMIL",
+  "seed": 42,
+  "epochs": 30,
+  "best_epoch": 3,
+  "best_validation_score": 1.2496983408927917,
+  "selection_criterion": "validation macro-AUROC + macro-F1",
+  "torch_version": "2.11.0+cu128",
+  "cuda_runtime": "12.8"
+}
