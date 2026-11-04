@@ -1,0 +1,11 @@
+{
+  "dataset": "C17",
+  "method": "ABMIL",
+  "seed": 42,
+  "epochs": 30,
+  "best_epoch": 22,
+  "best_validation_score": 1.6280632019042969,
+  "selection_criterion": "validation macro-AUROC + macro-F1",
+  "torch_version": "2.11.0+cu128",
+  "cuda_runtime": "12.8"
+}
