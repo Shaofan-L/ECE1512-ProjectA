@@ -1,0 +1,65 @@
+{
+  "dataset": "BRACS",
+  "seed": 42,
+  "method": "TemperatureScaling",
+  "baseline_best_epoch": 3,
+  "temperature": 1.1792338739787334,
+  "temperature_bounds": [
+    0.01,
+    100.0
+  ],
+  "fit_objective": "validation NLL",
+  "validation_slides": 62,
+  "test_slides": 86,
+  "validation_nll_before": 1.3999655242095113,
+  "validation_nll_after": 1.3913155378046105,
+  "ece_bins": 5,
+  "brier_definition": "mean sum of squared errors across classes",
+  "before": {
+    "auc": 0.7858082967011538,
+    "acc": 46.51162922382355,
+    "f1": 0.3716467618942261,
+    "nll": 1.4110060599538965,
+    "brier": 0.6486498268320123,
+    "ece": 0.03888525177763248
+  },
+  "after": {
+    "auc": 0.7854158657730086,
+    "acc": 46.51162922382355,
+    "f1": 0.3716467618942261,
+    "nll": 1.4073212989354995,
+    "brier": 0.6473622074635677,
+    "ece": 0.06295991147399367
+  },
+  "baseline_config": {
+    "dataset": "BRACS",
+    "data_dir": "./feature/BRACS/patch_feats_pretrain_medical_ssl.h5",
+    "dataset_csv_dir": "./dataset_csv",
+    "D_feat": 384,
+    "D_inner": 256,
+    "D_attn": 128,
+    "n_res": 0,
+    "n_class": 7,
+    "B": 1,
+    "n_worker": 0,
+    "pin_memory": true,
+    "n_shot": 0,
+    "seed": 42,
+    "lr": 0.0001,
+    "wd": 1e-05,
+    "train_epoch": 30,
+    "warmup_epoch": 3,
+    "droprate": 0.0
+  },
+  "limitations": [
+    "Small validation sets.",
+    "Validation data reused after checkpoint selection.",
+    "C17 train/validation patient overlap and center-based test split."
+  ],
+  "auc_numerical_audit": {
+    "previous_before": 0.7858082967011538,
+    "previous_after": 0.7854158657730086,
+    "reason": "Avoid ties caused by probability rounding."
+  },
+  "auc_score_definition": "Binary logit margin; multiclass one-vs-rest log-odds."
+}
