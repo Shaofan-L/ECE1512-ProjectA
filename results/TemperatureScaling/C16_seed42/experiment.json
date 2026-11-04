@@ -1,0 +1,66 @@
+{
+  "dataset": "C16",
+  "seed": 42,
+  "method": "TemperatureScaling",
+  "baseline_best_epoch": 3,
+  "temperature": 0.09381466063432212,
+  "temperature_bounds": [
+    0.01,
+    100.0
+  ],
+  "fit_objective": "validation NLL",
+  "validation_slides": 27,
+  "test_slides": 129,
+  "validation_nll_before": 0.049904092173302196,
+  "validation_nll_after": 4.562174095005251e-09,
+  "ece_bins": 5,
+  "brier_definition": "mean sum of squared errors across classes",
+  "before": {
+    "auc": 0.9224489795918368,
+    "acc": 88.37209343910217,
+    "f1": 0.8713515996932983,
+    "nll": 0.2700436879430036,
+    "brier": 0.1564333462280197,
+    "ece": 0.03273901890746245
+  },
+  "after": {
+    "auc": 0.9224489795918368,
+    "acc": 88.37209343910217,
+    "f1": 0.8713515996932983,
+    "nll": 1.7703706549165996,
+    "brier": 0.20855892429409187,
+    "ece": 0.10926849301321925
+  },
+  "baseline_config": {
+    "dataset": "CAMELYON16",
+    "data_dir": "./feature/C16/patch_feats_pretrain_medical_ssl.h5",
+    "D_feat": 384,
+    "D_inner": 256,
+    "D_attn": 128,
+    "n_res": 0,
+    "n_class": 2,
+    "B": 1,
+    "n_worker": 0,
+    "pin_memory": true,
+    "n_shot": 0,
+    "val_fraction": 0.1,
+    "seed": 42,
+    "lr": 0.0001,
+    "wd": 1e-05,
+    "train_epoch": 30,
+    "warmup_epoch": 3,
+    "droprate": 0.0,
+    "dataset_csv_dir": "./dataset_csv"
+  },
+  "limitations": [
+    "Small validation sets.",
+    "Validation data reused after checkpoint selection.",
+    "C17 train/validation patient overlap and center-based test split."
+  ],
+  "auc_numerical_audit": {
+    "previous_before": 0.9224489795918368,
+    "previous_after": 0.9224489795918368,
+    "reason": "Avoid ties caused by probability rounding."
+  },
+  "auc_score_definition": "Binary logit margin; multiclass one-vs-rest log-odds."
+}

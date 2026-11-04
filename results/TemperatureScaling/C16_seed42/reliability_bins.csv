@@ -1,0 +1,11 @@
+bin,lower,upper,count,accuracy,confidence,method
+1,0.0,0.2,0,,,Uncalibrated
+2,0.2,0.4,0,,,Uncalibrated
+3,0.4,0.6,4,0.0,0.537510882928495,Uncalibrated
+4,0.6,0.8,9,0.5555555555555556,0.7175995848713944,Uncalibrated
+5,0.8,1.0,116,0.9396551724137931,0.9343543651421886,Uncalibrated
+1,0.0,0.2,0,,,TemperatureScaling
+2,0.2,0.4,0,,,TemperatureScaling
+3,0.4,0.6,0,,,TemperatureScaling
+4,0.6,0.8,3,0.0,0.7098618743801262,TemperatureScaling
+5,0.8,1.0,126,0.9047619047619048,0.9997305553616262,TemperatureScaling
