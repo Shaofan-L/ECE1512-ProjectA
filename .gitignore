@@ -1,0 +1,25 @@
+﻿# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Operating system files
+.DS_Store
+__MACOSX/
+Thumbs.db
+Desktop.ini
+
+# Downloaded archives
+/downloads/
+ProjectA_review*.zip
+
+# Large feature data
+/feature/**/*.h5
+/feature/**/*.hdf5
+
+# Original whole-slide images and annotations
+/slide/*.tif
+/slide/*.tiff
+/slide/*.xml
